@@ -1,12 +1,12 @@
 # H5ChartComponent
 使用了canvas 、JavaScript 和 CSS3，可自定义数据生成图表。
 ## 支持
-1. 水平柱状图
-2. 垂直柱状图
-3. 饼图
-4. 雷达图
-5. 折线图
-6. 环形图
+1. 水平柱状图（bar）
+2. 垂直柱状图（bar_v）
+3. 饼图（pie）
+4. 雷达图（radar）
+5. 折线图（line）
+6. 环形图（ring）
 
 ## 使用方法
 ```
@@ -40,5 +40,15 @@ var chart1 = new Chart('bar', {
     });
     var demo1 = document.getElementsByClassName('demo1')[0];
     demo1.appendChild(chart1);
-    ```
-   
+```
+## 参数
+```
+type: 'pie',    //图表类型
+width: 'auto',   //宽度
+height: 'auto',  //高度
+data: [{    //展示的数据
+    name: 'test',  //数据项目名称
+    rate: 1,    //数据占比
+    color: 'black'   //项目颜色
+}]
+```
