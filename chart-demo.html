@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="Chart.js"></script>
+    <link rel="stylesheet" href="chart.css">
+    <style>
+        .demo {
+            display: inline-block;
+            margin: 40px;
+            float: left;
+        }
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo demo1">
+        <h3>水平柱状图</h3>
+    </div>
+    <div class="demo demo2">
+        <h3>垂直柱状图</h3>
+    </div>
+    <div class="demo demo3">
+        <h3>饼图</h3>
+    </div>
+    <div class="demo demo4">
+        <h3>折线图</h3>
+    </div>
+    <div class="demo demo5">
+        <h3>雷达图</h3>
+    </div>
+    <div class="demo demo6">
+        <h3>环形图</h3>
+    </div>
+
+<script>
+    var chart1 = new Chart('bar', {
+        type: 'bar',
+        width: '300px',
+        height: '100px',
+        animation: true,
+        data: [{
+            name: 'JavaScript',
+            rate: 0.4,
+            color: 'green'
+        }, {
+            name: 'CSS',
+            rate: 0.2,
+            color: 'yellow',
+        }, {
+            name: 'HTML',
+            rate: 0.6,
+            color: 'red',
+        },{
+            name: 'Bootstrap',
+            rate: 0.7,
+            color: '#432453',
+        },{
+            name: 'AngularJS',
+            rate: 1,
+            color: 'blue',
+        }],
+        style: {}
+    });
+    var demo1 = document.getElementsByClassName('demo1')[0];
+    demo1.appendChild(chart1);
+
+    var chart2 = new Chart('bar_v', {
+        type: 'bar_v',
+        width: '200px',
+        height: '200px',
+        animation: true,
+        data: [{
+            name: 'JavaScript',
+            rate: 0.4,
+            color: 'green'
+        }, {
+            name: 'CSS',
+            rate: 0.2,
+            color: 'yellow',
+        }, {
+            name: 'HTML',
+            rate: 0.6,
+            color: 'red',
+        },{
+            name: 'Bootstrap',
+            rate: 0.7,
+            color: '#432453',
+        },{
+            name: 'AngularJS',
+            rate: 1,
+            color: 'blue',
+        }],
+        style: {}
+    });
+    var demo2 = document.getElementsByClassName('demo2')[0];
+    demo2.appendChild(chart2);
+
+    var chart3 = new Chart('pie', {
+        type: 'pie',
+        width: '200px',
+        height: '200px',
+        animation: true,
+        data: [{
+            name: 'JavaScript',
+            rate: 0.4,
+            color: 'green'
+        }, {
+            name: 'CSS',
+            rate: 0.2,
+            color: 'yellow',
+        }, {
+            name: 'HTML',
+            rate: 0.6,
+            color: 'red',
+        },{
+            name: 'Bootstrap',
+            rate: 0.7,
+            color: '#432453',
+        },{
+            name: 'AngularJS',
+            rate: 1,
+            color: 'blue',
+        }],
+        style: {}
+    });
+    var demo3 = document.getElementsByClassName('demo3')[0];
+    demo3.appendChild(chart3);
+
+    var chart4 = new Chart('line', {
+        type: 'line',
+        width: '200px',
+        height: '200px',
+        animation: true,
+        data: [{
+            name: 'JavaScript',
+            rate: 0.4,
+            color: 'green'
+        }, {
+            name: 'CSS',
+            rate: 0.2,
+            color: 'yellow',
+        }, {
+            name: 'HTML',
+            rate: 0.6,
+            color: 'red',
+        },{
+            name: 'Bootstrap',
+            rate: 0.7,
+            color: '#432453',
+        },{
+            name: 'AngularJS',
+            rate: 1,
+            color: 'blue',
+        }],
+        style: {}
+    });
+    var demo4 = document.getElementsByClassName('demo4')[0];
+    demo4.appendChild(chart4);
+
+    var chart5 = new Chart('radar', {
+        type: 'radar',
+        width: '200px',
+        height: '200px',
+        animation: true,
+        data: [{
+            name: 'JavaScript',
+            rate: 0.4,
+            color: 'green'
+        }, {
+            name: 'CSS',
+            rate: 0.2,
+            color: 'yellow',
+        }, {
+            name: 'HTML',
+            rate: 0.6,
+            color: 'red',
+        },{
+            name: 'Bootstap',
+            rate: 0.7,
+            color: '#432453',
+        },{
+            name: 'AngularJS',
+            rate: 1,
+            color: 'blue',
+        }],
+        style: {}
+    });
+    var demo5 = document.getElementsByClassName('demo5')[0];
+    demo5.appendChild(chart5);
+
+    var chart6 = new Chart('ring', {
+        type: 'ring',
+        width: '200px',
+        height: '200px',
+        animation: true,
+        data: [{
+            name: 'JavaScript',
+            rate: 0.4,
+            color: 'green'
+        }, {
+            name: 'CSS',
+            rate: 0.2,
+            color: 'yellow',
+        }, {
+            name: 'HTML',
+            rate: 0.6,
+            color: 'red',
+        },{
+            name: 'Bootstrap',
+            rate: 0.7,
+            color: '#432453',
+        },{
+            name: 'AngularJS',
+            rate: 1,
+            color: 'blue',
+        }],
+        style: {}
+    });
+    var demo6 = document.getElementsByClassName('demo6')[0];
+    demo6.appendChild(chart6);
+
+
+
+
+
+    var loadEvent = document.createEvent('CustomEvent');
+    loadEvent.initCustomEvent('load', true, false);
+    var leaveEvent = document.createEvent('CustomEvent');
+    leaveEvent.initCustomEvent('leave', true, false);
+
+    var demos = document.getElementsByClassName('demo');
+    for (var i = 0, l = demos.length; i < l; i++) {
+        (function (i) {
+            var chart = demos[i].getElementsByClassName('chart')[0];
+            chart.dispatchEvent(loadEvent);
+            demos[i].loaded = true;
+            demos[i].onclick = function () {
+                if (demos[i].loaded) {
+                    chart.dispatchEvent(leaveEvent);
+                } else {
+                    chart.dispatchEvent(loadEvent);
+                }
+                demos[i].loaded = !demos[i].loaded;
+            };
+        })(i);
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+/*图表组件的样式*/
+
+
+.chart {
+    position: relative;
+}
+
+
+/*条形图*/
+
+.chart_bar .bar_line {
+    height: 15px;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 15px;
+}
+
+.chart_bar .bar_name {
+    width: 60px;
+    float: left;
+    color: #000;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.chart_bar .bar_rate {
+    height: 15px;
+    margin-left: 5px;
+    float: left;
+    position: relative;
+}
+
+.chart_bar .bar_rate_bg{
+    height: 15px;
+    border-radius: 3px;
+    background-color: aqua;
+    float: left;
+}
+
+.chart_bar .bar_per {
+    width: 20px;
+    color: #231234;
+    margin-left: 5px;
+    float: left;
+    opacity: 1;
+}
+
+
+/*垂直条形图*/
+
+.chart_bar_v {
+
+}
+
+.chart_bar_v .bar_v_line {
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+}
+
+.chart_bar_v .bar_v_name {
+    color: #000;
+    text-align: center;
+    width: 100%;
+    transform-origin:left ;
+}
+
+.chart_bar_v .bar_v_rate {
+    position: relative;
+    text-align: center;
+    width: 16px;
+    margin: 5px auto;
+    transform: rotate(180deg);
+
+}
+
+.chart_bar_v .bar_v_rate_bg{
+    width: 16px;
+    border-radius: 3px;
+    background-color: aqua;
+}
+
+.chart_bar_v .bar_v_per {
+    color: #231234;
+    width: 100%;
+    transform: rotate(180deg);
+    margin-right: -10px;
+}
+
+
+/* 饼图 */
+
+.chart canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.chart_pie {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.chart_pie .caption {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 12px;
+    z-index: 10;
+
+}
+
+.chart_pie .caption .name {
+    position: absolute;
+    text-align: center;
+    font-size: 12px;
+    opacity: 1;
+    white-space: nowrap;
+}
+
+.chart_pie .caption .per {
+    transform: scale(0.8);
+}
+
+#bgCanvas{
+    opacity: 1;
+}
+
+#textCanvas {
+    opacity: 0;
+    transition: opacity 1s 1.5s;
+}
+
+.chart_pie_load .caption .name {
+    transition: opacity 1s 1.5s;
+    opacity: 1;
+}
+
+.chart_pie_load #textCanvas {
+    transition: opacity 1s 1.5s;
+    opacity: 1;
+}
+
+.chart_pie_load #bgCanvas {
+    transition: opacity .5s;
+    opacity: 1;
+}
+
+.chart_pie_leave #bgCanvas {
+    transition: opacity .5s .5s;
+    opacity: 0;
+}
+
+.chart_pie_leave .caption .name {
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+.chart_pie_leave #textCanvas {
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+/*折线图*/
+
+.chart_line {
+    background-color: #fafafa;
+    position: relative;
+}
+
+.chart_line .caption {
+    position: absolute;
+    bottom: -25px;
+    font-size: 12px;
+}
+
+.chart_line .caption .name {
+    display: inline-block;
+    transform: translateX(50%) scale(0.8) rotate(30deg);
+    height: 20px;
+    white-space: nowrap;
+    line-height: 20px;
+    text-align: left;
+    opacity: 0;
+    transition: opacity .5s 1.5s;
+}
+
+.chart_line_load .caption .name {
+    opacity: 1;
+}
+
+.chart_line_leave .caption .name {
+    opacity: 0;
+}
+
+
+/*雷达图*/
+
+.chart_radar .caption {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.chart_radar .caption .name {
+    position: absolute;
+    opacity: 1;
+}
+
+
+.chart_radar .caption .rate {
+    position: absolute;
+    opacity: 1;
+    z-index: 99;
+    font-size: 12px;
+    transform: scale(0.7);
+    color: #ff6587;
+}
+
+.chart_radar_load .caption .rate {
+    transition: opacity 1s 1.5s;
+    opacity: 1;
+}
+
+.chart_radar_leave .caption .rate {
+    opacity: 0;
+}
+
+
+
+/*环形图*/
+
+.chart_ring {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+.chart_ring .per {
+    position: absolute;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    top: 50%;
+    width: 100%;
+    margin-top: -10px;
+    z-index: 10;
+    opacity: 0;
+    font-size: 20px;
+}
+
+.chart_ring .name {
+    position: absolute;
+    text-align: center;
+    bottom: -20px;
+    height: 20px;
+    width: 100%;
+    z-index: 10;
+    opacity: 1;
+
+}
+
+.chart_ring_load .per {
+    transition: opacity 1s 1.5s;
+    opacity: 1;
+}
+
+.chart_ring_leave .per {
+    transition: opacity 1s .5s;
+    opacity: 0;
+}
+
+
+
